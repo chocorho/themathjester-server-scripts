@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # 
-# Scrambles the DIRECTORY NAME of the MGG Web Edition, so that
+# Scrambles the DIRECTORY NAME of the COA Web Edition, so that
 # nominally, only chocorho himself has immediate access to it,
 # and those wishing to test it will need to contact him.
 # 
@@ -31,12 +31,12 @@ ln -s /var/www/html/old.html  "/var/www/html/$oldname"
 # (note, requires bash 4 and above!)
 # TODO -- if $newname contains a `$`, do we need to escape it?
 declare -A encoding=( ['#']='%23' ['$']='%24' ['%']='%25' ['&']='%26' \
-             ['+']='%2B' [',']='%2C' ['/']='%2F' [':']='%3A' \
-             [';']='%3B' ['=']='%3D' ['?']='%3F' ['@']='%40' \
-             ['\"']='%22' ['<']='%3C' ['>']='%3E' ['`']='%60' \
-             ['{']='%7B' ['}']='%7D' ['|']='%7C' \
-             ['\\']='%5C' ['^']='%5E' ['~']='%7E' \
-             ['[']='%5B' [']']='%5D' [' ']='%20' )
+                      ['+']='%2B' [',']='%2C' ['/']='%2F' [':']='%3A' \
+                      [';']='%3B' ['=']='%3D' ['?']='%3F' ['@']='%40' \
+                      ['\"']='%22' ['<']='%3C' ['>']='%3E' ['`']='%60' \
+                      ['{']='%7B' ['}']='%7D' ['|']='%7C' \
+                      ['\\']='%5C' ['^']='%5E' ['~']='%7E' \
+                      ['[']='%5B' [']']='%5D' [' ']='%20' )
 
 encoded_url=""
 index=0
